@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projet9_backend</title>
+    <title>Projet10_backend</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -24,12 +24,14 @@
              <thead>
                  <tr>
                     <th>#</th>
-                    
+                    <th>Image</th>
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Classe</th>
                     <th>Tuteurs</th>
-                    <th>Image</th>
+                    <th>Villes</th>
+                    <th>Nationalités</th>
+                    <th>Groupes sanguins</th>
                     <th>Actions</th>
                  </tr>
             </thead>
@@ -40,12 +42,16 @@
               @foreach($etudiants as $etudiant)
                 <tr>
                     <td>{{ $ide }}</td>
-                  
+                    <td><img src="/image/{{ $etudiant->photo }}" alt=""  style="width:60px; height:60px; border-radius:50px;"></td>
                     <td>{{ $etudiant->nom }}</td>
                     <td>{{ $etudiant->prenom }}</td>
                     <td>{{ $etudiant->classe }}</td>
                     <td>{{ $etudiant->tuteur->nom }}</td>
-                    <td><img src="/image/{{ $etudiant->photo }}" alt=""  style="width:60px; height:60px; border-radius:50px;"></td>
+                    <td>{{ $etudiant->ville }}</td>
+                    <td>{{ $etudiant->nation }}</td>
+                    <td>{{ $etudiant->groupe }}</td>
+                   
+                    
                     <td>
                         <a href="/update-etudiant/{{$etudiant->id}}" class="btn btn-info">Update</a>
                         <a href="/delete-etudiant/{{$etudiant->id}}" class="btn btn-danger">Delete</a>

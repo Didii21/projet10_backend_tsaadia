@@ -47,7 +47,10 @@
                                  <label for="photo" class="form-label">Profession</label>
                                  <input type="text" class="form-control" id="profession" name="profession" value="{{ $tuteur->profession }}">
                              </div>
-                            
+                             <div class="form-group">
+                                 <label for="photo" class="form-label">Contacts</label>
+                                 <input type="text" class="form-control" id="profession" name="profession" value="{{ $tuteur->contact }}">
+                             </div>
                              <br>
                                  <button type="submit" class="btn btn-primary">Modifier un tuteur</button>
                   <br> <br>

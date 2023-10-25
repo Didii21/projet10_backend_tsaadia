@@ -45,7 +45,10 @@
                                  <label for="Nom" class="form-label">Profession</label>
                                  <input type="text" class="form-control" id="profession" name="profession">
                              </div>
-                            
+                             <div class="form-group">
+                                 <label for="Nom" class="form-label">Contacts</label>
+                                 <input type="text" class="form-control" id="contact" name="contact">
+                             </div>
 
                              <br>
                                  <button type="submit" class="btn btn-primary">Ajouter un tuteur</button>

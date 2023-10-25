@@ -35,6 +35,10 @@
                              <input type="text" name="id" style="display: none;" value="{{ $etudiants->id }}">
                              
                              <div class="form-group">
+                                 <label for="image" class="form-label">Photos</label>
+                                 <input type="file" class="form-control" id="photo" name="photo" value="{{ $etudiants->images }}">
+                             </div>
+                             <div class="form-group">
                                  <label for="Nom" class="form-label">Nom</label>
                                  <input type="text" class="form-control" id="Nom" name="nom" value="{{ $etudiants->nom }}">
                                  
@@ -48,10 +52,19 @@
                                  <input type="text" class="form-control" id="Classe" name="classe" value="{{ $etudiants->classe }}">
                              </div>
                              <div class="form-group">
-                                 <label for="image" class="form-label">Photos</label>
-                                 <input type="file" class="form-control" id="image" name="image" value="{{ $etudiants->images }}">
+                                 <label for="ville" class="form-label">Ville</label>
+                                 <input type="text" class="form-control" id="ville" name="ville">
+                             </div>
+                             <div class="form-group">
+                                 <label for="Nom" class="form-label">Nationalité</label>
+                                 <input type="text" class="form-control" id="nation" name="nation">
+                             </div>
+                             <div class="form-group">
+                                 <label for="Nom" class="form-label">Groupe sanguin</label>
+                                 <input type="text" class="form-control" id="groupe" name="groupe">
                              </div>
                              <br>
+                             <div class="form-group">
                              <select class="form-select" aria-label="Default select example" name="tuteur">
                                   <option selected>Tuteurs</option>
                                   @foreach ($tuteur as $tuteur)
@@ -60,6 +73,7 @@
                                   </option>
                                   @endforeach
                               </select>
+                              </div>
                              <br>
                                  <button type="submit" class="btn btn-primary">Modifier un étudiant</button>
                   <br> <br>

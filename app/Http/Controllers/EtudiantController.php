@@ -25,6 +25,10 @@ class EtudiantController extends Controller
             'prenom' => 'required',
             'classe' => 'required',
             'tuteur' => 'required',
+            'ville' => 'required',
+            'nation' => 'required',
+            'groupe' => 'required',
+            
         ]);
         
         $etudiant = new Etudiant();
@@ -33,6 +37,9 @@ class EtudiantController extends Controller
         $etudiant->prenom = $request->prenom;
         $etudiant->classe = $request->classe;
         $etudiant->tuteur_id = $request->tuteur;
+        $etudiant->ville = $request->ville;
+        $etudiant->nation = $request->nation;
+        $etudiant->groupe = $request->groupe;
         $etudiant->save();
         
         return redirect('/ajouter')->with('status', 'L\'étudiant a été ajouté avec succès.');

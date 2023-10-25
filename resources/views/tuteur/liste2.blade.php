@@ -29,6 +29,7 @@
                     <th>Prénom</th>
                     <th>Profession</th>
                     <th>Etudiants</th>
+                    <th>Contacts</th>
                     <th>Actions</th>
                  </tr>
             </thead>
@@ -52,6 +53,7 @@
                     {{ $etudiant->prenom }}
                     @endforeach
                     </td>
+                    <td>Contacts</td>
                     <td>
                         <a href="/update-tuteur/{{$tuteur->id}}" class="btn btn-info">Update</a>
                         <a href="/delete-tuteur/{{$tuteur->id}}" class="btn btn-danger">Delete</a>

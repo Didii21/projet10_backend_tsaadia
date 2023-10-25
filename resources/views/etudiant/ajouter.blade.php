@@ -32,6 +32,10 @@
                      <form action="/ajouter/traitement" method="POST" class="form-group">
                             @csrf
                              
+                            <div class="form-group">
+                                 <label for="Nom" class="form-label">photo</label>
+                                 <input type="file" class="form-control" id="photo" name="photo">
+                             </div>
                              <div class="form-group">
                                  <label for="Nom" class="form-label">Nom</label>
                                  <input type="text" class="form-control" id="Nom" name="nom">
@@ -46,8 +50,16 @@
                                  <input type="text" class="form-control" id="Classe" name="classe">
                              </div>
                              <div class="form-group">
-                                 <label for="Nom" class="form-label">photo</label>
-                                 <input type="file" class="form-control" id="photo" name="photo">
+                                 <label for="ville" class="form-label">Ville</label>
+                                 <input type="text" class="form-control" id="ville" name="ville">
+                             </div>
+                             <div class="form-group">
+                                 <label for="Nom" class="form-label">Nationalité</label>
+                                 <input type="text" class="form-control" id="nation" name="nation">
+                             </div>
+                             <div class="form-group">
+                                 <label for="Nom" class="form-label">Groupe sanguin</label>
+                                 <input type="text" class="form-control" id="groupe" name="groupe">
                              </div>
                              <br>
                              <div class="form-group">
